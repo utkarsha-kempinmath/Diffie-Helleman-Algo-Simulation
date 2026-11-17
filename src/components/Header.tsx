@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="bg-[#FFFFFF] border-b border-[#E5E1D8] shadow-xs sticky top-0 z-30">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3.5">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3.5">
         {/* Top Row: Clean Brand & Simple Controls */}
         <div className="flex items-center justify-between gap-4">
           {/* Title */}
@@ -56,12 +56,11 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Clean Mode Switcher Tabs */}
-        <nav className="flex space-x-1 sm:space-x-2 mt-3 pt-2.5 border-t border-[#F1EDE4] text-xs sm:text-sm font-medium">
+        {/* Clean 2-Mode Switcher Tabs */}
+        <nav className="flex space-x-2 mt-3 pt-2.5 border-t border-[#F1EDE4] text-xs sm:text-sm font-medium">
           {[
             { id: 'simulator', label: '1. Step-by-Step Simulator' },
             { id: 'messaging', label: '2. Try Secret Messaging' },
-            { id: 'mitm', label: '3. Man-in-the-Middle Attack' },
           ].map((tab) => {
             const isActive = currentTab === tab.id;
             return (

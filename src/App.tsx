@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { SimpleSimulator } from './components/SimpleSimulator';
 import { SymmetricMessagingDemo } from './components/SymmetricMessagingDemo';
-import { MitmAttackView } from './components/MitmAttackView';
 import { HowItWorksModal } from './components/HowItWorksModal';
 import { modPow } from './utils/cryptoMath';
 
@@ -39,7 +38,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Container */}
-      <main className="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+      <main className="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 py-8">
         {currentTab === 'simulator' && (
           <SimpleSimulator
             p={p}
@@ -55,13 +54,11 @@ export const App: React.FC = () => {
         )}
 
         {currentTab === 'messaging' && <SymmetricMessagingDemo sharedKey={sharedKey} />}
-
-        {currentTab === 'mitm' && <MitmAttackView />}
       </main>
 
       {/* Minimal, Clean Footer */}
       <footer className="border-t border-[#E5E1D8] bg-[#FFFFFF] py-4 text-center text-xs text-[#78716C]">
-        <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>Diffie-Hellman Key Exchange Simulator</span>
           <button
             onClick={() => setIsGuideOpen(true)}

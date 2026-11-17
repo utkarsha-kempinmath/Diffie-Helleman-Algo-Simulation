@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Key, ChevronDown, ChevronRight, X, Shield, Sparkles, BookOpen } from 'lucide-react';
+import { Key, ChevronDown, ChevronRight, X } from 'lucide-react';
 
 interface HowItWorksModalProps {
   isOpen: boolean;
@@ -27,10 +27,6 @@ export const HowItWorksModal: React.FC<HowItWorksModalProps> = ({ isOpen, onClos
     {
       q: 'Why can’t an eavesdropper (Eve) just compute the secret key?',
       a: 'This is the Discrete Logarithm Problem. Computing g^x mod p is very fast, but reversing it (finding x given g, p, and the result) is computationally hard for large numbers. In real-world cryptography (like HTTPS and TLS), p is over 600 digits long, taking longer than the age of the universe to crack.',
-    },
-    {
-      q: 'What is a Man-in-the-Middle (MITM) attack?',
-      a: 'If an attacker can actively alter data on the network (not just listen), they could pretend to be Bob to Alice, and pretend to be Alice to Bob. In the real world, this is prevented using Digital Certificates (like HTTPS SSL/TLS certificates) to verify who you are talking to.',
     },
   ];
 
