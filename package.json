@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://utkarsha-kempinmath.github.io/Diffie-Helleman-Algo-Simulation/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",
@@ -14,6 +17,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.6.2",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.33",
     "tailwindcss": "^3.4.17",
     "typescript": "~7.0.2",
