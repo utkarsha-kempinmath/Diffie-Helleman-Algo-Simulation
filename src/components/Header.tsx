@@ -60,9 +60,8 @@ export const Header: React.FC<HeaderProps> = ({
         <nav className="flex space-x-1 sm:space-x-2 mt-3 pt-2.5 border-t border-[#F1EDE4] text-xs sm:text-sm font-medium">
           {[
             { id: 'simulator', label: '1. Step-by-Step Simulator' },
-            { id: 'paint', label: '2. Paint Mixing Analogy' },
-            { id: 'messaging', label: '3. Try Secret Messaging' },
-            { id: 'mitm', label: '4. Man-in-the-Middle Attack' },
+            { id: 'messaging', label: '2. Try Secret Messaging' },
+            { id: 'mitm', label: '3. Man-in-the-Middle Attack' },
           ].map((tab) => {
             const isActive = currentTab === tab.id;
             return (

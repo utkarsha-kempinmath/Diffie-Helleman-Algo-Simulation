@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { SimpleSimulator } from './components/SimpleSimulator';
-import { PaintMixingView } from './components/PaintMixingView';
 import { SymmetricMessagingDemo } from './components/SymmetricMessagingDemo';
 import { MitmAttackView } from './components/MitmAttackView';
 import { HowItWorksModal } from './components/HowItWorksModal';
@@ -54,8 +53,6 @@ export const App: React.FC = () => {
             onGoToMessaging={() => setCurrentTab('messaging')}
           />
         )}
-
-        {currentTab === 'paint' && <PaintMixingView />}
 
         {currentTab === 'messaging' && <SymmetricMessagingDemo sharedKey={sharedKey} />}
 
